@@ -1,0 +1,47 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Primitiva {
+
+    public static int SUMADOR = 10;
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int numeroFilas;
+
+        System.out.print("Introduzca el número de filas: ");
+        numeroFilas = sc.nextInt();
+
+        int numeroColumnas;
+
+        System.out.print("Introduzca el número de columnas: ");
+        numeroColumnas = sc.nextInt();
+
+        int incrementador = 0;
+
+        String cadena = "";
+
+        for (int i = 1; i <= numeroFilas + 1; i++) {
+
+            for (int j = 0; j <= numeroColumnas; j++) {
+
+                cadena = cadena + incrementador + " ";
+                incrementador = incrementador + SUMADOR;
+
+            }
+
+            cadena = cadena + "\n";
+            incrementador = i;
+
+        }
+
+        String cadenaModificada;
+
+        cadenaModificada = "  " + cadena.substring(2, cadena.length());
+        System.out.println(cadenaModificada);
+        JOptionPane.showMessageDialog(null, cadenaModificada);
+
+    }
+}
