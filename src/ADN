@@ -1,0 +1,48 @@
+public class ADN {
+
+    public static String devuelveComplementario(String adn) {
+
+        String complementario = adn;
+        String cadena = "";
+
+        char caracterActual;
+        char a = 'A';
+        char t = 'T';
+        char c = 'C';
+        char g = 'G';
+
+
+        for (int i = 0; i < adn.length(); i++) {
+
+            caracterActual = complementario.charAt(i);
+
+            if (caracterActual == 'A') {
+
+                a = 'T';
+                cadena = cadena + a;
+
+            }
+            if (caracterActual == 'T') {
+
+                t = 'A';
+                cadena = cadena + t;
+
+            }
+            if (caracterActual == 'C') {
+
+                c = 'G';
+                cadena = cadena + c;
+
+            }
+            if (caracterActual == 'G') {
+
+                g = 'C';
+                cadena = cadena + g;
+
+            }
+
+        }
+
+        return cadena;
+    }
+}
