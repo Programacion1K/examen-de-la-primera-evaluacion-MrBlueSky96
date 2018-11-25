@@ -1,0 +1,33 @@
+public class Enmascara {
+
+    public static int DIGITOS_A_QUITAR = 4;
+
+    public static String enmascara(String enmascara) {
+
+        String enmascaraFinal = enmascara;
+
+        if (enmascara.length() > 4) {
+
+            String primeraParte;
+            String segundaParte;
+
+            primeraParte = enmascara.substring(0, enmascara.length() - DIGITOS_A_QUITAR);
+            segundaParte = enmascara.substring(enmascara.length() - DIGITOS_A_QUITAR, enmascara.length());
+
+            String primeraParteReemplazada = primeraParte;
+
+            for (int i = 0; i < primeraParte.length(); i++) {
+
+                primeraParteReemplazada = primeraParteReemplazada.replace(primeraParteReemplazada.charAt(i), '#');
+
+            }
+
+            enmascaraFinal = primeraParteReemplazada + segundaParte;
+
+        }
+
+
+        return enmascaraFinal;
+    }
+
+}
