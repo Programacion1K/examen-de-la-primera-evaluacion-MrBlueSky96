@@ -2,7 +2,7 @@ package src;
 
 public class PruebaEjercicios4 {
     public static void main(String[] args) {
-        /* Descomentar una vez resueltos
+
         System.out.println(Enmascara.enmascara("4556364607935616"));
         System.out.println(Enmascara.enmascara("64607935616"));
         System.out.println(Enmascara.enmascara("1"));
@@ -15,6 +15,6 @@ public class PruebaEjercicios4 {
         System.out.println(ADN.devuelveComplementario("ATTGC"));
 
         System.out.println(ADN.devuelveComplementario("GTAT"));
-         */
+
     }
 }
