@@ -1,0 +1,86 @@
+public class PaisEuropeo {
+
+    private String nombre;
+    private String dominio;
+    private String categoria;
+
+    private int poblacion;
+    private static int fondoComun;
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+    public String getCategoria() {
+
+        categoria(getFondoComun());
+
+
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+
+    public static int getFondoComun() {
+        return fondoComun;
+    }
+
+
+    public PaisEuropeo(String nombre, int poblacion, String dominio) {
+
+        this.nombre = nombre;
+        this.poblacion = poblacion;
+        this.dominio = dominio;
+
+    }
+
+    public PaisEuropeo(String nombre, int poblacion) {
+
+        this.nombre = nombre;
+        this.poblacion = poblacion;
+
+        this.dominio = this.nombre.substring(0, 2).toLowerCase();
+
+
+    }
+
+    public void aportar(int dinero) {
+
+        fondoComun = fondoComun + dinero;
+
+    }
+
+    public void retirar(int dinero) {
+
+        fondoComun = fondoComun - dinero;
+    }
+
+    public void categoria(int fondoComun) {
+
+        this.fondoComun = fondoComun;
+
+        if (fondoComun > 100000) {
+
+            setCategoria("A");
+
+        }
+        if (fondoComun >= 0 && fondoComun < 100000) {
+
+            setCategoria("B");
+
+        }
+        if (fondoComun < 0) {
+
+            setCategoria("C");
+
+        }
+
+    }
+
+
+}
