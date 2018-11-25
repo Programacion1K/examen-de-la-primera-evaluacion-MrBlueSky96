@@ -1,3 +1,5 @@
+package src;
+
 public class PruebaEjercicios4 {
     public static void main(String[] args) {
         /* Descomentar una vez resueltos

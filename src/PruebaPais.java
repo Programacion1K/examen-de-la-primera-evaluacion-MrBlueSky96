@@ -1,3 +1,5 @@
+package src;
+
 public class PruebaPais {
     public static void main(String[] args) {
         /*Descomentar para probar una vez resuelto
