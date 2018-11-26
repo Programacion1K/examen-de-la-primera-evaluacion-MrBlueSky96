@@ -1,14 +1,17 @@
 public class PaisEuropeo {
 
-    private String nombre;
-    private String dominio;
+    private final String nombre;
+    private final String dominio;
     private String categoria;
 
     private int poblacion;
     private static int fondoComun;
 
+    private double media;
+
 
     public String getNombre() {
+
         return nombre;
     }
 
@@ -17,12 +20,16 @@ public class PaisEuropeo {
 
         categoria(getFondoComun());
 
-
         return categoria;
     }
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public int getPoblacion() {
+
+        return poblacion;
     }
 
 
@@ -80,6 +87,24 @@ public class PaisEuropeo {
 
         }
 
+    }
+
+
+    public double media(String nombrePrimerPais, String nombreSegundoPais) {
+
+        this.media = media;
+
+        int poblacionPrimera;
+        int poblacionSegunda;
+
+        poblacionPrimera = getPoblacion();
+        poblacionSegunda = getPoblacion();
+
+        double media;
+
+        media = (poblacionPrimera + poblacionSegunda) / 2.0;
+
+        return media;
     }
 
 
